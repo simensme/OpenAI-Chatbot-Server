@@ -8,12 +8,12 @@ dotenv.config();
 app.use(express.static(path.join(__dirname, 'public')));
 
 const corsOptions = {
-  origin: 'https://openai-chatbot-server.onrender.com',
+  origin: 'https://openai-chatbot-server.onrender.com', 
 };
 
 app.use(cors(corsOptions));
 
-const port = 2500;
+const port = process.env.PORT || 2500; 
 
 app.get('/api/key', (req, res) => {
   const apiKey = process.env.API_KEY;
