@@ -24,5 +24,3 @@ app.get('/api/key', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
-console.log('Test');
