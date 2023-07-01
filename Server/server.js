@@ -7,11 +7,7 @@ dotenv.config();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const corsOptions = {
-  origin: 'https://openai-chatbot-server.onrender.com', 
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 const port = process.env.PORT || 2500; 
 
